@@ -1,7 +1,11 @@
 <html>
   <body>
     <script>
-      window.location.replace("http://www.w3schools.com");
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const hash = urlParams.get('hash');
+      var url = btoa(hash);
+      window.location.replace(url);
     </script>
   </body>
 </html>
