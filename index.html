@@ -4,7 +4,7 @@
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const hash = urlParams.get('hash');
-      var url = btoa(hash);
+      var url = atob(hash);
       window.location.replace(url);
     </script>
   </body>
